@@ -380,8 +380,4 @@ elif colunas == "Previsão com Machine Learning (ML)":
         classe_predita = y_encoder.inverse_transform([predicao])[0]
         st.success(f"🧾 Previsão: {classe_predita}")
 
-    st.subheader("📊 Matriz de Confusão do Modelo")
-    fig, ax = plt.subplots()
-    cm = confusion_matrix(y_test, y_pred)
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=y_encoder.classes_, yticklabels=y_encoder.classes_, ax=ax)
-    st.pyplot(fig)
+  
